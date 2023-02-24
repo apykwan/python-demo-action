@@ -5,10 +5,8 @@ jobs:
   pytest:
     runs-on: ubuntu-latest
     steps:
-      - name: clone repository
-        run: |
-          git clone https://github.com/apykwan/python-demo-action
-          cd python-demo-action
+      - name: checkout code
+        uses: actions/checkout@v3
       - name: install pytest
         run: pip install pytest
       - name: run pytest
